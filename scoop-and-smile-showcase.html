@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111b62">
+  <meta name="description" content="Scoop & Smile Cafe — ice cream, milkshakes, fresh juice and feel-good fast food. Visit us opposite Africa Nazarene University.">
+  <title>Scoop & Smile Cafe | Ice Cream, Food & Good Vibes</title>
+  <style>
+    :root{--navy:#245c3e;--blue:#245c3e;--yellow:#d8eb91;--pink:#f28a45;--paper:#f8f5ec;--ink:#20382c;--muted:#69756b;--line:rgba(32,56,44,.14);--card:#fffdf7;--shadow:0 18px 48px rgba(37,59,43,.11);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);line-height:1.55}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{background:#17462f;color:#f8f5ec;text-align:center;padding:9px 15px;font-size:13px}.topbar strong{color:#ffcf4b}
+    header{position:sticky;top:0;z-index:20;background:rgba(248,245,236,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;color:var(--navy);font-weight:900;font-size:22px;letter-spacing:-1px}.logo{width:42px;height:42px;border-radius:14px;background:#f28a45;display:grid;place-items:center;font-size:25px}.links{display:flex;gap:27px;color:var(--muted);font-size:14px;font-weight:650}.links a:hover{color:var(--blue)}.nav-actions{display:flex;align-items:center;gap:10px}.btn{border:0;border-radius:999px;padding:12px 18px;background:var(--navy);color:#fff;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #101b6226}.btn.yellow{background:var(--yellow);color:var(--navy)}.btn.outline{background:white;color:var(--navy);border:1px solid var(--line)}
+    .hero{padding:66px 0 58px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:42px}.eyebrow{color:var(--blue);font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:900}.hero h1{font-size:clamp(44px,6vw,76px);line-height:.99;letter-spacing:-.065em;color:var(--navy);margin:14px 0 18px}.hero h1 span{color:var(--pink)}.hero p{max-width:520px;color:var(--muted);font-size:17px}.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.hero-art{min-height:380px;border-radius:42% 58% 50% 50%;background:linear-gradient(140deg,#d8eb91,#f2d58a);display:grid;place-items:center;position:relative;overflow:hidden}.hero-art:before,.hero-art:after{content:"";position:absolute;border:2px solid #fff8;border-radius:50%;width:290px;height:290px}.hero-art:after{width:220px;height:220px}.hero-emoji{font-size:clamp(130px,20vw,220px);z-index:1;filter:drop-shadow(0 20px 10px #6d4a242b);animation:bob 4s ease-in-out infinite}.badge{position:absolute;z-index:2;right:7%;top:12%;background:#f28a45;color:#fff;border-radius:50%;width:94px;height:94px;display:grid;place-items:center;text-align:center;font-size:12px;font-weight:900;line-height:1.3;transform:rotate(9deg)}.hero-note{position:absolute;z-index:2;bottom:10%;left:4%;background:white;padding:11px 16px;border-radius:14px;box-shadow:var(--shadow);font-weight:800;font-size:13px}
+    .info-strip{background:#245c3e;color:#fff}.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:19px 0}.info-item{display:flex;gap:12px;align-items:center;justify-content:center}.info-icon{font-size:23px}.info-item small{display:block;color:#c7cbed;font-size:11px}.info-item strong{font-size:13px}
+    section{scroll-margin-top:90px}.section{padding:72px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:27px}.section-head h2{font-size:clamp(32px,4vw,46px);line-height:1.05;letter-spacing:-.05em;color:var(--navy);margin:8px 0 0}.section-head p{max-width:420px;color:var(--muted);margin:0}
+    .category-tabs{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:22px}.tab{border:1px solid var(--line);background:white;color:var(--navy);padding:9px 16px;border-radius:999px;font-size:13px;font-weight:800}.tab.active,.tab:hover{background:var(--navy);color:white;border-color:var(--navy)}
+    .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.menu-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:17px;display:flex;align-items:center;gap:13px;box-shadow:0 5px 18px #101b6208}.food-icon{width:58px;height:58px;flex:0 0 58px;border-radius:16px;background:rgba(216,235,145,.55);display:grid;place-items:center;font-size:30px}.food-info{min-width:0;flex:1}.food-info h3{font-size:15px;margin:0 0 3px;color:var(--navy)}.food-info p{margin:0;color:var(--muted);font-size:11px}.price{font-weight:900;color:var(--navy);font-size:14px;white-space:nowrap}.add{border:0;border-radius:50%;width:33px;height:33px;background:#eaf2ff;color:var(--blue);font-size:21px;font-weight:800;flex:0 0 33px}.add:hover{background:var(--blue);color:white}.subhead{grid-column:1/-1;margin:22px 0 0;padding-bottom:8px;border-bottom:2px solid #dce7ff;color:var(--navy);font-size:18px}.hint{color:var(--muted);font-size:12px;margin-top:18px}
+    .ice-note{background:#fff5d8;border:1px solid #ffe6a0;padding:15px 18px;border-radius:15px;color:#6d5414;font-size:13px;margin-bottom:18px}.ice-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.ice-group{background:white;border:1px solid var(--line);border-radius:18px;padding:20px}.ice-group h3{margin:0 0 12px;color:var(--navy)}.ice-row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:13px}.ice-row:last-child{border:0}.ice-row strong{white-space:nowrap;color:var(--navy)}.ice-extra{margin-top:15px;color:var(--muted);font-size:12px}
+    .about{background:#edf0df;border-radius:28px;padding:38px;display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:center}.about-art{min-height:230px;border-radius:22px;background:linear-gradient(145deg,#d8eb91,#f28a45);display:grid;place-items:center;font-size:105px}.about h2{font-size:36px;line-height:1.05;letter-spacing:-.05em;color:var(--navy);margin:8px 0 13px}.about p{color:var(--muted)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-card{background:white;border:1px solid var(--line);border-radius:20px;padding:24px}.contact-card h3{margin:0 0 8px;color:var(--navy)}.contact-card p{color:var(--muted);margin:0 0 16px}.contact-actions{display:flex;gap:10px;flex-wrap:wrap}.hours{font-weight:850;color:var(--navy)}
+    footer{margin-top:70px;background:#17462f;color:white;padding:30px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-row small{color:#c7cbed}
+    .cart-fab{position:fixed;right:20px;bottom:20px;z-index:30;border:0;border-radius:999px;background:#d8eb91;color:#17462f;padding:14px 19px;font-weight:900;box-shadow:0 10px 28px #101b6233}.count{background:var(--navy);color:white;border-radius:50%;padding:2px 7px;margin-left:5px}.overlay{position:fixed;inset:0;background:#09102c88;z-index:40;display:none;justify-content:flex-end}.overlay.open{display:flex}.cart-panel{width:min(440px,100%);height:100%;background:#f8f5ec;padding:24px;overflow:auto;box-shadow:-15px 0 40px #0002}.cart-head{display:flex;justify-content:space-between;align-items:center}.cart-head h2{color:var(--navy);margin:0}.close{border:0;background:#edf0fb;border-radius:50%;width:38px;height:38px;font-size:22px}.cart-empty{color:var(--muted);padding:30px 0;text-align:center}.cart-line{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.cart-line small{display:block;color:var(--muted)}.qty{display:flex;align-items:center;gap:8px}.qty button{border:0;background:#eaf2ff;color:var(--navy);width:26px;height:26px;border-radius:50%;font-weight:900}.total{display:flex;justify-content:space-between;font-size:19px;font-weight:900;color:var(--navy);padding:20px 0}.checkout{width:100%}.checkout-note{font-size:11px;color:var(--muted);margin-top:10px}
+
+
+
+    .food-film-section{display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:38px;padding:48px 0 70px}
+    .food-film-copy h2,.instagram-inner h2{font-size:clamp(34px,4.5vw,49px);line-height:1.03;letter-spacing:-.055em;color:#20382c;margin:10px 0 14px}
+    .food-film-copy h2 em,.instagram-inner h2 em{font-style:normal;color:#245c3e}
+    .food-film-copy p,.instagram-inner p{color:var(--muted);max-width:430px}
+    .food-film-frame{position:relative;overflow:hidden;border-radius:24px;background:#20382c;box-shadow:var(--shadow);border:8px solid #fffdf7}
+    .food-film{display:block;width:100%;max-height:480px;aspect-ratio:16/9;object-fit:cover;background:#20382c}
+    .film-caption{position:absolute;left:14px;bottom:14px;padding:7px 12px;border-radius:999px;background:#17462fdd;color:white;font-size:11px;font-weight:800;pointer-events:none}
+    .today-treat{display:flex;align-items:center;gap:20px;margin:5px auto 55px;padding:22px 25px;border-radius:22px;background:#edf0df;border:1px solid var(--line)}
+    .today-treat-icon{font-size:48px;flex:0 0 auto}.today-treat h2{margin:3px 0 5px;color:#20382c;font-size:23px;letter-spacing:-.04em}.today-treat p{margin:0;color:var(--muted);font-size:13px}.today-treat .btn{margin-left:auto;white-space:nowrap}
+    .favourites-section{padding:42px 0 70px}
+    .favourites-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .favourite-card{display:flex;flex-direction:column;gap:6px;padding:20px;border:1px solid var(--line);border-radius:18px;background:#fffdf7;transition:transform .2s ease,box-shadow .2s ease}
+    .favourite-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .favourite-card>span{font-size:38px;margin-bottom:6px}.favourite-card strong{color:#245c3e}.favourite-card small{color:var(--muted);font-size:11px}
+    .instagram-showcase{background:#245c3e;color:#fffdf7;margin-top:20px}
+    .instagram-inner{padding-block:54px;display:flex;justify-content:space-between;align-items:center;gap:35px}
+    .instagram-inner .eyebrow{color:#d8eb91}.instagram-inner h2{color:#fffdf7}.instagram-inner h2 em{color:#d8eb91}.instagram-inner p{color:#e1e9dc}
+    .instagram-tile{width:min(290px,38%);min-height:190px;flex:0 0 auto;border-radius:22px;background:linear-gradient(135deg,#f28a45,#d8eb91);color:#20382c;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;box-shadow:0 15px 35px #0002;transition:transform .2s ease}
+    .instagram-tile:hover{transform:rotate(2deg) scale(1.03)}.instagram-tile span{font-size:48px}.instagram-tile strong{font-size:17px}.instagram-tile small{font-size:11px}
+    .reviews-invite{text-align:center;padding:65px 15px 20px;max-width:720px}
+    .reviews-invite h2{font-size:clamp(30px,4vw,42px);line-height:1.05;letter-spacing:-.05em;color:#20382c;margin:10px 0}
+    .reviews-invite p{color:var(--muted);max-width:560px;margin:0 auto 20px}
+    .whatsapp-float{position:fixed;left:20px;bottom:20px;z-index:29;display:flex;align-items:center;gap:8px;padding:13px 17px;border-radius:999px;background:#218c50;color:white;font-weight:850;box-shadow:0 10px 28px #17462f38;transition:transform .2s ease}
+    .whatsapp-float:hover{transform:translateY(-4px)}.whatsapp-float span{font-size:12px}
+    @media(max-width:850px){.food-film-section{grid-template-columns:1fr;gap:22px}.favourites-grid{grid-template-columns:repeat(2,1fr)}.today-treat{flex-wrap:wrap}.today-treat .btn{margin-left:0}.instagram-tile{width:36%}}
+    @media(max-width:620px){.food-film-section{padding:30px 0 48px}.food-film-frame{border-width:5px;border-radius:18px}.food-film{aspect-ratio:4/5;max-height:520px}.today-treat{align-items:flex-start;padding:18px;gap:12px}.today-treat-icon{font-size:36px}.today-treat>div{flex:1;min-width:0}.today-treat h2{font-size:19px}.today-treat .btn{width:100%}.favourites-grid{gap:10px}.favourite-card{padding:14px}.instagram-inner{flex-direction:column;align-items:stretch;padding-block:42px}.instagram-tile{width:100%;min-height:150px}.whatsapp-float{left:12px;bottom:12px;padding:12px 14px}.whatsapp-float span{font-size:11px}}
+
+    /* Clear hero tagline: a solid label sits below the floating illustration. */
+    .hero-art{overflow:visible;isolation:isolate;margin-bottom:18px}
+    .hero-emoji{position:relative;z-index:1;transform-origin:center;line-height:1}
+    .hero-note{z-index:5;left:50%;bottom:-17px;transform:translateX(-50%);width:max-content;max-width:calc(100% - 30px);white-space:normal;text-align:center;background:#fffdf7;color:#20382c;border:1px solid rgba(32,56,44,.12);padding:13px 20px;border-radius:999px;box-shadow:0 12px 28px rgba(37,59,43,.16);font-size:14px;line-height:1.35}
+    .hero-note span{color:#f28a45;margin-right:5px}
+    .hero-art:before,.hero-art:after{pointer-events:none}
+    .mood-section{padding:54px 0 70px}
+    .mood-heading{text-align:center;max-width:650px;margin:0 auto 25px}
+    .mood-heading h2{font-size:clamp(30px,4vw,43px);line-height:1.08;letter-spacing:-.05em;color:#20382c;margin:9px 0}
+    .mood-heading h2 em{font-style:normal;color:#245c3e}
+    .mood-heading p{color:var(--muted);margin:0}
+    .mood-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .mood-card{border:1px solid var(--line);background:#fffdf7;border-radius:20px;padding:22px 15px;text-align:center;color:var(--ink);box-shadow:0 8px 24px rgba(37,59,43,.06);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+    .mood-card>span{display:grid;place-items:center;width:62px;height:62px;border-radius:50%;margin:0 auto 12px;background:rgba(216,235,145,.55);font-size:32px}
+    .mood-card strong,.mood-card small{display:block}
+    .mood-card strong{color:#245c3e;font-size:14px}
+    .mood-card small{color:var(--muted);font-size:11px;margin-top:4px}
+    .mood-card:hover,.mood-card:focus-visible{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#d8eb91}
+    .happy-break{overflow:hidden;background:#245c3e;color:#fffdf7;margin:15px 0 30px}
+    .happy-break-inner{min-height:300px;display:grid;grid-template-columns:1fr .8fr;align-items:center;gap:25px;padding-block:35px}
+    .happy-break .eyebrow{color:#d8eb91}
+    .happy-break h2{font-size:clamp(36px,5vw,56px);line-height:.98;letter-spacing:-.06em;margin:10px 0 13px}
+    .happy-break h2 span{color:#d8eb91}
+    .happy-break p{max-width:440px;color:#e2eadf}
+    .happy-break .btn{margin-top:5px}
+    .happy-stickers{min-height:230px;position:relative;display:grid;place-items:center}
+    .sticker{display:grid;place-items:center;border-radius:50%;box-shadow:0 15px 30px rgba(0,0,0,.15)}
+    .sticker.big{width:190px;height:190px;background:#d8eb91;font-size:105px;animation:stickerFloat 4.5s ease-in-out infinite}
+    .sticker.small{position:absolute;width:58px;height:58px;background:#fffdf7;font-size:30px}
+    .sticker.one{top:15px;left:12%}.sticker.two{bottom:15px;right:12%}.sticker.three{top:20px;right:14%;background:#f28a45}
+    .why-section{padding:60px 0 75px}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .why-card{padding:24px;border-radius:19px;background:#fffdf7;border:1px solid var(--line)}
+    .why-card>span{font-size:35px}.why-card h3{color:#245c3e;margin:13px 0 6px}.why-card p{color:var(--muted);font-size:13px;margin:0}
+    @keyframes stickerFloat{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-10px) rotate(4deg)}}
+    @media(max-width:850px){.mood-grid{grid-template-columns:repeat(2,1fr)}.happy-break-inner{grid-template-columns:1fr .7fr}.why-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:620px){.hero-art{min-height:265px;margin-bottom:23px}.hero-note{font-size:12px;padding:11px 14px;bottom:-18px}.badge{top:8%;right:3%}.mood-section{padding:45px 0 52px}.mood-grid{gap:10px}.mood-card{padding:17px 10px}.mood-card>span{width:54px;height:54px;font-size:27px}.mood-card strong{font-size:12px}.mood-card small{font-size:10px}.happy-break-inner{grid-template-columns:1fr;text-align:center;padding-block:35px}.happy-break p{margin-inline:auto}.happy-stickers{min-height:190px}.sticker.big{width:155px;height:155px;font-size:85px}.why-section{padding:45px 0 55px}.why-grid{grid-template-columns:1fr}}
+    @media(prefers-reduced-motion:reduce){.sticker.big{animation:none}}
+
+    /* Gentle brand motion */
+    .hero-art{animation:heroDrift 7s ease-in-out infinite}
+    .hero-emoji{animation:bob 4s ease-in-out infinite, softPop 5s ease-in-out infinite}
+    .badge{animation:badgeTurn 12s ease-in-out infinite}
+    .btn,.tab,.menu-card,.food-icon,.logo{transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+    .menu-card{animation:cardRise .55s both}
+    .menu-card:nth-child(3n){animation-delay:.06s}
+    .menu-card:nth-child(3n+1){animation-delay:.12s}
+    .menu-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .menu-card:hover .food-icon{transform:rotate(-8deg) scale(1.08)}
+    .logo:hover{transform:rotate(-9deg) scale(1.06)}
+    .instagram-link{display:inline-flex;align-items:center;gap:8px;font-weight:800;color:var(--green)}
+    .instagram-link:hover{color:var(--pink);transform:translateY(-2px)}
+    .reveal-on-scroll{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+    .reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
+    @keyframes heroDrift{0%,100%{border-radius:42% 58% 50% 50%;transform:translateY(0)}50%{border-radius:53% 47% 44% 56%;transform:translateY(-7px)}}
+    @keyframes softPop{0%,100%{filter:drop-shadow(0 20px 10px #6d4a242b)}50%{filter:drop-shadow(0 25px 13px #6d4a243d)}}
+    @keyframes badgeTurn{0%,100%{transform:rotate(9deg)}50%{transform:rotate(15deg)}}
+    @keyframes cardRise{from{opacity:.65;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+    @media(prefers-reduced-motion:reduce){.hero-art,.hero-emoji,.badge,.menu-card{animation:none!important}.reveal-on-scroll{opacity:1;transform:none;transition:none}}
+
+    @keyframes bob{50%{transform:translateY(-10px) rotate(3deg)}}@media(max-width:850px){.hero{gap:20px}.menu-grid{grid-template-columns:repeat(2,1fr)}.ice-groups{grid-template-columns:1fr}.links{gap:15px}.about{gap:20px}}
+    @media(max-width:620px){.wrap{width:calc(100% - 30px)}nav{min-height:66px}.links{display:none}.brand{font-size:19px}.nav-actions .btn{padding:10px 13px;font-size:12px}.hero{grid-template-columns:1fr;padding:45px 0 35px}.hero p{font-size:15px}.hero-art{min-height:285px}.info-grid{grid-template-columns:1fr;gap:12px}.info-item{justify-content:flex-start}.section{padding:52px 0}.section-head{display:block}.section-head p{margin-top:12px}.menu-grid{grid-template-columns:1fr}.menu-card{padding:13px}.about{grid-template-columns:1fr;padding:20px}.about-art{min-height:180px;font-size:85px}.about h2{font-size:30px}.contact-grid{grid-template-columns:1fr}.footer-row{justify-content:center;text-align:center}.badge{width:78px;height:78px;font-size:10px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="topbar">Ice cream is cheaper than therapy. <strong>Come get your happy scoop!</strong></div>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#home"><span class="logo">🍨</span> Scoop &amp; Smile</a>
+      <div class="links"><a href="#menu">Menu</a><a href="#icecream">Ice cream</a><a href="#about">Our cafe</a><a href="#contact">Contact</a><a href="https://www.instagram.com/scoop_n_smile_cafe?cplk=NTNhbXRwZmsxNmE1&utm_source=qr" target="_blank" rel="noopener">Instagram ↗</a></div>
+      <div class="nav-actions"><a class="btn yellow" href="#menu">Order now ↓</a></div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero wrap">
+      <div>
+        <span class="eyebrow">Your new happy place</span>
+        <h1>A scoop of joy.<br>A plate of <span>smiles.</span></h1>
+        <p>Fresh ice cream, creamy milkshakes, refreshing drinks and delicious bites — made for good moods and happy moments.</p>
+        <div class="hero-buttons"><a class="btn" href="#menu">Explore our menu <span>→</span></a><a class="btn outline" href="#contact">Find our cafe</a></div>
+      </div>
+      <div class="hero-art" aria-label="Ice cream illustration"><div class="hero-emoji">🍨</div><div class="badge">FRESH<br>FLAVORS<br>DAILY ✦</div><div class="hero-note"><span>✦</span> Made to make you smile 😊</div></div>
+    </section>
+
+    <div class="info-strip"><div class="wrap info-grid">
+      <div class="info-item"><span class="info-icon">📍</span><div><small>FIND US</small><strong>Opposite Africa Nazarene University</strong></div></div>
+      <div class="info-item"><span class="info-icon">🕘</span><div><small>OPEN DAILY</small><strong>9:00 AM – 10:00 PM</strong></div></div>
+      <div class="info-item"><span class="info-icon">🛵</span><div><small>DELIVERY</small><strong>Call or WhatsApp 0729 971 139</strong></div></div>
+    </div></div>
+
+
+
+    <section class="food-film-section wrap" id="food-film">
+      <div class="food-film-copy">
+        <span class="eyebrow">Fresh from our kitchen</span>
+        <h2>A little look at<br><em>what's cooking.</em></h2>
+        <p>From loaded fries and wraps to delicious bites, take a look at some of the treats waiting for you at Scoop &amp; Smile.</p>
+        <a class="btn" href="#menu">Explore the menu →</a>
+      </div>
+      <div class="food-film-frame">
+        <video class="food-film" controls muted playsinline preload="metadata" poster="">
+          <source src="assets/scoop-smile-food-showreel.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+        <span class="film-caption">A taste of Scoop &amp; Smile ✦</span>
+      </div>
+    </section>
+
+    <section class="mood-section wrap" aria-labelledby="mood-title">
+      <div class="mood-heading">
+        <span class="eyebrow">What's your mood today?</span>
+        <h2 id="mood-title">Pick a craving. <em>We'll handle the happy.</em></h2>
+        <p>Tap a mood and jump straight to something delicious.</p>
+      </div>
+      <div class="mood-grid">
+        <button class="mood-card" type="button" data-mood="icecream"><span>🍦</span><strong>Something sweet</strong><small>Ice cream & milkshakes</small></button>
+        <button class="mood-card" type="button" data-mood="fast"><span>🍔</span><strong>I'm really hungry</strong><small>Burgers, fries & fast food</small></button>
+        <button class="mood-card" type="button" data-mood="quick"><span>🥟</span><strong>Just a quick bite</strong><small>Samosas & quick treats</small></button>
+        <button class="mood-card" type="button" data-mood="drinks"><span>🥤</span><strong>Something refreshing</strong><small>Juice, tea & cold drinks</small></button>
+      </div>
+    </section>
+
+    <section class="happy-break">
+      <div class="wrap happy-break-inner">
+        <div><span class="eyebrow">A little happiness goes a long way</span><h2>Make today a<br><span>treat-yourself</span> day.</h2><p>Bring your friends, share a glass bowl, or enjoy your favorite snack. Your happy place is waiting.</p><a class="btn yellow" href="#icecream">Find your happy scoop →</a></div>
+        <div class="happy-stickers" aria-hidden="true"><span class="sticker big">🍨</span><span class="sticker small one">🍓</span><span class="sticker small two">🍒</span><span class="sticker small three">✨</span></div>
+      </div>
+    </section>
+
+    <section class="why-section wrap">
+      <div class="section-head"><div><span class="eyebrow">The Scoop & Smile feeling</span><h2>Little things.<br>Big happy moments.</h2></div><p>Whether it's a quick stop or a catch-up with friends, we have a treat for the moment.</p></div>
+      <div class="why-grid">
+        <article class="why-card"><span>🍦</span><h3>Sweet moments</h3><p>Classic, mixed and exotic ice cream flavors with syrup or sprinkles.</p></article>
+        <article class="why-card"><span>🍟</span><h3>Cravings covered</h3><p>From quick bites to filling fast-food favorites, there's plenty to choose from.</p></article>
+        <article class="why-card"><span>🛵</span><h3>Enjoy it your way</h3><p>Visit the cafe or contact us to arrange your delivery.</p></article>
+      </div>
+    </section>
+
+
+    <section class="today-treat wrap" aria-label="Today's treat idea">
+      <div class="today-treat-icon">🍦</div>
+      <div><span class="eyebrow">A treat idea for today</span><h2>Make it a scoop-and-snack kind of day.</h2><p>Pair your favorite ice cream with a quick bite. Ask us what flavors are available today.</p></div>
+      <a class="btn yellow" href="https://wa.me/254729971139?text=Hello%20Scoop%20%26%20Smile!%20What%20ice%20cream%20flavors%20are%20available%20today%3F" target="_blank" rel="noopener">Ask today's flavors ↗</a>
+    </section>
+
+    <section class="section wrap" id="menu">
+      <div class="section-head"><div><span class="eyebrow">Something delicious for everyone</span><h2>Explore our menu</h2></div><p>Choose your favorites and add them to your order. Your order will be sent to us on WhatsApp.</p></div>
+      <div class="category-tabs" id="foodTabs">
+        <button class="tab active" data-filter="all">All items</button><button class="tab" data-filter="quick">Quick treats</button><button class="tab" data-filter="fast">Fast food</button><button class="tab" data-filter="drinks">Drinks</button>
+      </div>
+      <div class="menu-grid" id="foodGrid"></div>
+      <p class="hint">Prices are shown in Kenyan Shillings (KSh). Delivery charges, if any, can be confirmed when ordering.</p>
+    </section>
+
+
+    <section class="favourites-section wrap" id="favourites">
+      <div class="section-head"><div><span class="eyebrow">A few tasty picks</span><h2>What are you craving?</h2></div><p>Some delicious ideas to get your order started. Tap any pick to find it on the menu.</p></div>
+      <div class="favourites-grid">
+        <a class="favourite-card" href="#menu"><span>🍔</span><strong>Burger &amp; Fries</strong><small>A filling classic · KSh 350</small></a>
+        <a class="favourite-card" href="#menu"><span>🍟</span><strong>Chips Masala</strong><small>A spicy, tasty bite · KSh 200</small></a>
+        <a class="favourite-card" href="#icecream"><span>🍨</span><strong>Ice Cream Glass Bowl</strong><small>Five scoops to enjoy · from KSh 300</small></a>
+        <a class="favourite-card" href="#menu"><span>🥤</span><strong>Regular Milkshake</strong><small>Vanilla, strawberry or chocolate · KSh 350</small></a>
+      </div>
+    </section>
+
+    <section class="section wrap" id="icecream" style="padding-top:10px">
+      <div class="section-head"><div><span class="eyebrow">The scoop everyone loves</span><h2>Ice cream menu</h2></div><p>Choose a small scoop, big scoop or a glass bowl to share.</p></div>
+      <div class="ice-note">🍒 All our ice creams come with syrup or sprinkles. Extra sauces and whipped cream toppings are available for an additional <strong>KSh 50</strong>.</div>
+      <div class="ice-groups">
+        <div class="ice-group"><h3>🍦 Regular flavors</h3><div class="ice-row"><span>Vanilla</span><strong>70 / 90 / 300</strong></div><div class="ice-row"><span>Chocolate</span><strong>70 / 90 / 300</strong></div><div class="ice-row"><span>Strawberry</span><strong>70 / 90 / 300</strong></div><p class="ice-extra">Small scoop / Big scoop / Glass bowl (5 scoops)</p></div>
+        <div class="ice-group"><h3>🍓 Mixed flavors</h3><div class="ice-row"><span>Vanilla Strawberry</span><strong>80 / 100 / 400</strong></div><div class="ice-row"><span>Vanilla Pistachio</span><strong>80 / 100 / 400</strong></div><div class="ice-row"><span>Vanilla Mango</span><strong>80 / 100 / 400</strong></div><div class="ice-row"><span>Vanilla Blueberry</span><strong>80 / 100 / 400</strong></div><p class="ice-extra">Small scoop / Big scoop / Glass bowl (5 scoops)</p></div>
+        <div class="ice-group"><h3>✨ Exotic flavors</h3><div class="ice-row"><span>Biscoti</span><strong>100 / 130 / 500</strong></div><div class="ice-row"><span>Salted Caramel</span><strong>100 / 130 / 500</strong></div><div class="ice-row"><span>Pinacolada</span><strong>100 / 130 / 500</strong></div><div class="ice-row"><span>Vanilla Choc flakes</span><strong>100 / 130 / 500</strong></div><div class="ice-row"><span>Caramel with Nuts</span><strong>100 / 130 / 500</strong></div><p class="ice-extra">Small scoop / Big scoop / Glass bowl (5 scoops)</p></div>
+      </div>
+      <p class="hint">For ice cream orders, please mention the flavor and size in your WhatsApp message. Ice cream sizes are not yet included in the quick-add cart.</p>
+    </section>
+
+    <section class="section wrap" id="about">
+      <div class="about"><div class="about-art">🍦🍟</div><div><span class="eyebrow">A little treat, a lot of happiness</span><h2>Welcome to Scoop &amp; Smile.</h2><p>We are a new cafe serving feel-good treats, from scoops of ice cream and milkshakes to quick bites, fast food and refreshing drinks. Whether you're stopping by with friends or ordering delivery, there's always something to make you smile.</p><p><strong>Find us opposite Africa Nazarene University.</strong> We're open every day from 9am to 10pm.</p><a class="btn" href="#contact">Visit or contact us →</a></div></div>
+    </section>
+
+
+    <section class="instagram-showcase">
+      <div class="wrap instagram-inner">
+        <div><span class="eyebrow">Follow the smiles</span><h2>More scoops. More smiles.<br><em>Find us on Instagram.</em></h2><p>Follow <strong>@scoop_n_smile_cafe</strong> for food pictures, cafe updates and fresh treats.</p><a class="btn yellow" href="https://www.instagram.com/scoop_n_smile_cafe/" target="_blank" rel="noopener">Visit our Instagram ↗</a></div>
+        <a class="instagram-tile" href="https://www.instagram.com/scoop_n_smile_cafe/" target="_blank" rel="noopener" aria-label="Visit Scoop and Smile on Instagram"><span>📸</span><strong>@scoop_n_smile_cafe</strong><small>Tap to see our latest posts</small></a>
+      </div>
+    </section>
+
+    <section class="section wrap" id="contact">
+      <div class="section-head"><div><span class="eyebrow">We'd love to hear from you</span><h2>Come by or order in.</h2></div><p>Have a question or craving something tasty? Call us or send your order directly on WhatsApp.</p></div>
+      <div class="contact-grid">
+        <div class="contact-card"><h3>📍 Visit the cafe</h3><p>Opposite Africa Nazarene University</p><div class="hours">Open daily · 9:00 AM – 10:00 PM</div></div>
+        <div class="contact-card"><h3>📞 Call or WhatsApp</h3><p>Delivery line: 0729 971 139</p><div class="contact-actions"><a class="btn" href="tel:+254729971139">Call us</a><a class="btn yellow" href="https://wa.me/254729971139" target="_blank" rel="noopener">WhatsApp us</a><a class="btn outline" href="https://www.instagram.com/scoop_n_smile_cafe?cplk=NTNhbXRwZmsxNmE1&utm_source=qr" target="_blank" rel="noopener">Instagram ↗</a></div></div>
+      </div>
+    </section>
+
+    <section class="reviews-invite wrap" id="reviews">
+      <span class="eyebrow">Your smile matters</span>
+      <h2>Visited us? Tell us what you loved.</h2>
+      <p>Your feedback helps our little cafe grow. Send us a message and your review may be featured on our website.</p>
+      <a class="btn" href="https://wa.me/254729971139?text=Hello%20Scoop%20%26%20Smile!%20I%20would%20like%20to%20share%20feedback%20about%20my%20visit." target="_blank" rel="noopener">Share your feedback ↗</a>
+    </section>
+
+  </main>
+
+  <footer><div class="wrap footer-row"><a class="brand" href="#home" style="color:white"><span class="logo">🍨</span> Scoop &amp; Smile</a><small>Ice cream is cheaper than therapy. Made with love. © <span id="year"></span> Scoop &amp; Smile.</small><a href="https://www.instagram.com/scoop_n_smile_cafe?cplk=NTNhbXRwZmsxNmE1&utm_source=qr" target="_blank" rel="noopener" class="instagram-link" style="color:#d8eb91">Instagram @scoop_n_smile_cafe ↗</a><a href="#reviews">Reviews</a><a href="#menu">Back to menu ↑</a></div></footer>
+
+  <a class="whatsapp-float" href="https://wa.me/254729971139" target="_blank" rel="noopener" aria-label="Chat with Scoop and Smile on WhatsApp">☏ <span>Chat with us</span></a>
+  <button class="cart-fab" id="openCart" type="button">🛒 Your order <span class="count" id="cartCount">0</span></button>
+  <div class="overlay" id="cartOverlay" aria-hidden="true"><aside class="cart-panel" role="dialog" aria-modal="true" aria-label="Your order">
+    <div class="cart-head"><h2>Your order</h2><button class="close" id="closeCart" aria-label="Close cart">×</button></div>
+    <div id="cartItems"><p class="cart-empty">Your basket is empty. Add something delicious from the menu!</p></div>
+    <div class="total"><span>Total</span><span id="cartTotal">KSh 0</span></div>
+    <button class="btn yellow checkout" id="checkout">Send order on WhatsApp ↗</button>
+    <p class="checkout-note">Your WhatsApp message will include your selected items and total. Delivery fee, if applicable, will be confirmed by the cafe.</p>
+  </aside></div>
+
+  <script>
+    const PHONE = "254729971139";
+    const items = [
+      {name:"Samosa",price:50,cat:"quick",icon:"🥟"},
+      {name:"Fried Egg",price:50,cat:"quick",icon:"🍳"},
+      {name:"Smocha",price:120,cat:"fast",icon:"🌭"},
+      {name:"Smocha without Eggs",price:100,cat:"fast",icon:"🌭"},
+      {name:"Instant Indomie with Eggs",price:150,cat:"fast",icon:"🍜"},
+      {name:"Instant Indomie without Eggs",price:100,cat:"fast",icon:"🍜"},
+      {name:"Hotdog & Fries",price:250,cat:"fast",icon:"🌭"},
+      {name:"Burger & Fries",price:350,cat:"fast",icon:"🍔"},
+      {name:"French Fries",price:150,cat:"fast",icon:"🍟"},
+      {name:"Loaded Fries",price:400,cat:"fast",icon:"🍟"},
+      {name:"Chips Masala",price:200,cat:"fast",icon:"🍟"},
+      {name:"Beef Wrap",price:150,cat:"fast",icon:"🌯"},
+      {name:"Chicken Wrap",price:200,cat:"fast",icon:"🌯"},
+      {name:"Fried Chicken",price:150,cat:"fast",icon:"🍗"},
+      {name:"Chips Mayai",price:250,cat:"fast",icon:"🍳"},
+      {name:"Ugali Mayai",price:200,cat:"fast",icon:"🍽️"},
+      {name:"Regular Milkshake (Vanilla, Strawberry, Chocolate)",price:350,cat:"drinks",icon:"🥤"},
+      {name:"Mixed Flavors Milkshake",price:400,cat:"drinks",icon:"🥤"},
+      {name:"Coffee",price:100,cat:"drinks",icon:"☕"},
+      {name:"Tea",price:100,cat:"drinks",icon:"🍵"},
+      {name:"Fresh Juice — Big Cup",price:150,cat:"drinks",icon:"🧃"},
+      {name:"Fresh Juice — Small Cup",price:70,cat:"drinks",icon:"🧃"},
+      {name:"Soft Drinks (All Flavors)",price:50,cat:"drinks",icon:"🥤"},
+      {name:"Bottled Soft Drink (500ml)",price:80,cat:"drinks",icon:"🧴"},
+      {name:"Water (1 litre)",price:70,cat:"drinks",icon:"💧"}
+    ];
+    const cart = {};
+    const grid = document.getElementById("foodGrid");
+    const money = n => "KSh " + n.toLocaleString("en-KE");
+    function renderMenu(filter="all"){
+      grid.innerHTML="";
+      const groups = filter==="all" ? ["quick","fast","drinks"] : [filter];
+      const titles={quick:"Quick treats",fast:"Fast food",drinks:"Drinks & refreshments"};
+      groups.forEach(group=>{
+        const heading=document.createElement("h3");heading.className="subhead";heading.textContent=titles[group];grid.appendChild(heading);
+        items.filter(item=>item.cat===group).forEach(item=>{
+          const card=document.createElement("article");card.className="menu-card";
+          card.innerHTML=`<div class="food-icon" aria-hidden="true">${item.icon}</div><div class="food-info"><h3>${item.name}</h3></div><strong class="price">${money(item.price)}</strong><button class="add" type="button" aria-label="Add ${item.name}" title="Add to order">+</button>`;
+          card.querySelector("button").addEventListener("click",()=>{cart[item.name]=(cart[item.name]||0)+1;updateCart();});
+          grid.appendChild(card);
+        });
+      });
+    }
+    document.querySelectorAll(".tab").forEach(tab=>tab.addEventListener("click",()=>{
+      document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));tab.classList.add("active");renderMenu(tab.dataset.filter);
+    }));
+    function updateCart(){
+      const entries=Object.entries(cart);const count=entries.reduce((s,[,q])=>s+q,0);
+      const total=entries.reduce((s,[name,q])=>s+items.find(i=>i.name===name).price*q,0);
+      document.getElementById("cartCount").textContent=count;document.getElementById("cartTotal").textContent=money(total);
+      const box=document.getElementById("cartItems");
+      if(!entries.length){box.innerHTML='<p class="cart-empty">Your basket is empty. Add something delicious from the menu!</p>';return;}
+      box.innerHTML="";
+      entries.forEach(([name,q])=>{
+        const item=items.find(i=>i.name===name);const row=document.createElement("div");row.className="cart-line";
+        row.innerHTML=`<div><strong>${name}</strong><small>${money(item.price)} each · ${money(item.price*q)}</small></div><div class="qty"><button type="button" aria-label="Remove one">−</button><strong>${q}</strong><button type="button" aria-label="Add one">+</button></div>`;
+        const buttons=row.querySelectorAll("button");
+        buttons[0].addEventListener("click",()=>{cart[name]--;if(cart[name]<=0)delete cart[name];updateCart();});
+        buttons[1].addEventListener("click",()=>{cart[name]++;updateCart();});
+        box.appendChild(row);
+      });
+    }
+    const overlay=document.getElementById("cartOverlay");
+    document.getElementById("openCart").addEventListener("click",()=>{overlay.classList.add("open");overlay.setAttribute("aria-hidden","false");});
+    function closeCart(){overlay.classList.remove("open");overlay.setAttribute("aria-hidden","true");}
+    document.getElementById("closeCart").addEventListener("click",closeCart);
+    overlay.addEventListener("click",e=>{if(e.target===overlay)closeCart();});
+    document.getElementById("checkout").addEventListener("click",()=>{
+      const entries=Object.entries(cart);if(!entries.length){alert("Please add at least one item to your order.");return;}
+      const total=entries.reduce((s,[name,q])=>s+items.find(i=>i.name===name).price*q,0);
+      const lines=entries.map(([name,q])=>`${q} x ${name} — ${money(items.find(i=>i.name===name).price*q)}`);
+      const message=`Hello Scoop & Smile! I'd like to place an order:\n\n${lines.join("\n")}\n\nTotal: ${money(total)}\n\nPlease confirm availability and delivery details.`;
+      window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`,"_blank","noopener");
+    });
+    document.getElementById("year").textContent=new Date().getFullYear();
+    renderMenu();updateCart();
+    document.querySelectorAll(".mood-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const mood = card.dataset.mood;
+        if (mood === "icecream") {
+          document.getElementById("icecream").scrollIntoView({behavior:"smooth"});
+          return;
+        }
+        const tab = document.querySelector(`.tab[data-filter="${mood}"]`);
+        if (tab) {
+          tab.click();
+          document.getElementById("menu").scrollIntoView({behavior:"smooth"});
+        }
+      });
+    });
+    // Reveal sections gently as visitors scroll down the page.
+    const revealTargets = document.querySelectorAll(".section-head, .ice-group, .about, .contact-card");
+    revealTargets.forEach(el => el.classList.add("reveal-on-scroll"));
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {threshold: 0.12});
+      revealTargets.forEach(el => revealObserver.observe(el));
+    } else {
+      revealTargets.forEach(el => el.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>
